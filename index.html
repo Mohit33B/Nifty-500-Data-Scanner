@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Market Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>📈 Stock Market Scanner</h1>
+
+      <!-- Category Buttons -->
+      <!-- <div class="category-buttons">
+        <button class="category-btn" data-category="nifty50">Nifty 50</button>
+        <button class="category-btn" data-category="niftyNext50">
+          Nifty Next 50
+        </button>
+        <button class="category-btn" data-category="niftyMidcap">
+          Nifty Midcap
+        </button>
+        <button class="category-btn" data-category="niftyBank">
+          Nifty Bank
+        </button>
+        <button class="category-btn" data-category="niftyFinancial">
+          Nifty Financial
+        </button>
+      </div> -->
+      <!-- Stock List Containers -->
+
+      <!-- OpenHigh -->
+      <div class="stock-container-wrapper">
+        <div class="stock-container" id="openHighContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>Change</th>
+                <th>OpenHigh</th>
+                <th>UP/DOWN</th>
+              </tr>
+            </thead>
+            <tbody id="openHighList"></tbody>
+          </table>
+        </div>
+        <!-- /////////////////////// -->
+        <div class="stock-container" id="openHighTwoTOFiveContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(2% To 5%)</th>
+                <th>OpenHigh</th>
+                <th>UP/DOWN</th>
+              </tr>
+            </thead>
+            <tbody id="openHighTwoToFivePercent"></tbody>
+          </table>
+        </div>
+        <!-- ///////////////////////// -->
+        <div class="stock-container" id="openHighTwoToFiveContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(-2% To -5%)</th>
+                <th>OpenHigh</th>
+                <th>UP/DOWN</th>
+              </tr>
+            </thead>
+            <tbody id="openHighMinusTwoToMinusFivePercent"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- OpenLow -->
+      <!-- =====================================-->
+      <div class="stock-container-wrapper2">
+        <div class="stock-container" id="openLowContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>Change</th>
+                <th>OpenLow</th>
+                <th>UP/DOWN</th>
+              </tr>
+            </thead>
+            <tbody id="openLowList"></tbody>
+          </table>
+        </div>
+        <!-- ///////////////////////////// -->
+        <div class="stock-container" id="openLowTwoToFiveContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(2% To 5%)</th>
+                <th>OpenLow</th>
+                <th>UP/DOWN</th>
+              </tr>
+            </thead>
+            <tbody id="openLowTwoToFivePercent"></tbody>
+          </table>
+        </div>
+        <!-- ///////////////////////////// -->
+        <div class="stock-container" id="openLowMinusTwoToMinusFiveContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(-2% To -5%)</th>
+                <th>OpenLow</th>
+                <th>UP/DOWN</th>
+              </tr>
+            </thead>
+            <tbody id="openLowMinusTwoToMinusFivePercent"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- GapUP -->
+      <!-- =========================================== -->
+      <div class="stock-container-wrapper3">
+        <div class="stock-container" id="gapUpContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>Change</th>
+                <th>GapUP</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="gapUpList"></tbody>
+          </table>
+        </div>
+        <!-- ////////////////////////// -->
+        <div class="stock-container" id="gapUpContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(2% To 5%)</th>
+                <th>GapUP</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="gapUpTowToFivePercent"></tbody>
+          </table>
+        </div>
+        <!-- //////////////////////////// -->
+        <div class="stock-container" id="gapUpContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(-2% To -5%)</th>
+                <th>GapUP</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="gapUpMinusTwoToMinusFivePercent"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- GapDown -->
+      <!-- ====================================== -->
+      <div class="stock-container-wrapper4">
+        <div class="stock-container" id="gapDownContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>Change</th>
+                <th>GapDown</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="gapDownList"></tbody>
+          </table>
+        </div>
+        <!-- //////////////////////// -->
+        <div class="stock-container" id="gapDownContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(2% To 5%)</th>
+                <th>GapDown</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="gapDownTowToFivePercent"></tbody>
+          </table>
+        </div>
+        <!-- //////////////////////////// -->
+        <div class="stock-container" id="gapDownContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(-2% To -5%)</th>
+                <th>GapDown</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="gapDownMinusTwoToMinusFivePercent"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- (2 To 5) Negitive and Postive  -->
+      <!-- ======================================= -->
+      <div class="stock-container-wrapper5">
+        <div class="stock-container" id="changeOfPercentContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>AllStock</th>
+                <th>LTP</th>
+                <th>N/P(2 To 5)%</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="ChangeOfPercent"></tbody>
+          </table>
+        </div>
+        <!-- //////////////////////// -->
+        <div class="stock-container" id="twoToFivePercentContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(+2% To +5%)</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="twoToFivePercent"></tbody>
+          </table>
+        </div>
+        <!-- ///////////////////////// -->
+        <div class="stock-container" id="minusTwoToMinusFivePercentContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(-2% To -5%)</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="minusTwoToMinusFivePercent"></tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- (5 To Upper/Down) -->
+      <!-- ============================================ -->
+      <div class="stock-container-wrapper6">
+        <div class="stock-container" id="fiveToUpper/DownContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>N/P(5 To UP/DW)%</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="fiveToUpperDown"></tbody>
+          </table>
+        </div>
+        <!-- /////////////////////////// -->
+        <div class="stock-container" id="fiveToUpperContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(5% To Upper)</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="fiveToUpper"></tbody>
+          </table>
+        </div>
+        <!-- //////////////////////////// -->
+        <div class="stock-container" id="fiveToDownContainer">
+          <table>
+            <thead>
+              <tr>
+                <th>Stock</th>
+                <th>LTP</th>
+                <th>(Down To -5%)</th>
+                <th>Volume</th>
+              </tr>
+            </thead>
+            <tbody id="fiveToDown"></tbody>
+          </table>
+        </div>
+      </div>
+      <!-- =========================================== -->
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
