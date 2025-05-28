@@ -15,9 +15,10 @@ body {
 }
 
 h1 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 20px;
+      font-size: 24px;
+    color: #3742c2;
+    margin-bottom: 20px;
+    background-color: #ff9900;
 }
 
 .category-buttons {
@@ -43,17 +44,14 @@ h1 {
   background-color: #0056b3;
 }
 
-.stock-container-wrapper {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
+.stock-container-wrapper,
 .stock-container-wrapper2,
 .stock-container-wrapper3,
 .stock-container-wrapper4,
 .stock-container-wrapper5,
 .stock-container-wrapper6 {
   margin-top: 20px;
+  margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
   gap: 20px;
